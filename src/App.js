@@ -112,8 +112,9 @@ if(data.length===0){
    return (
           <div className='tc'>
           <h1 className='f1'>Git-Galaxy</h1>
-          <div style={{display: 'flex'}}>
+          <div className=''>
             <Searchbox filter='language' searchChange={languageInput} setData={setData} setRadioState={setRadioState} language={language} />
+            <div className='filter_container'>
             <div className='sort'>Sort By Stars :</div>
             <div className='input_container'>
                <input checked={radioState.radio1} className='input' type="radio" id="L2H" name="fav_language" value="L2H" onClick={() => handleRadio(1)} />
@@ -122,6 +123,7 @@ if(data.length===0){
             <div className='input_container'>
                <input checked={radioState.radio2} className='input' type="radio" id="H2L" name="fav_language" value="H2L" onClick={() => handleRadio(2)} />
                <label className='input_label' for="html">High to Low</label>
+            </div>
             </div>
           </div>
           <div className="pagination">
